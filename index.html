@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- css style link added -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>Find your Favourite Books Info!!! </h1>
+    <!-- search-field -->
+    <input type="text" id="search-field">
+    <!-- onclick button -->
+    <button onclick="searchBook()">Search</button>
+    <!-- showing error -->
+    <div id="error"></div>
+    <!-- spinner -->
+    <div id="spinner">Loading...</div>
+    <!-- book container -->
+    <div id="books">
+    </div>
+    <script src="api.js"></script>
+</body>
+
+</html>

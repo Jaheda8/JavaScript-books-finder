@@ -1,0 +1,22 @@
+body{
+    text-align: center;
+    font-family: sans-serif;
+    font-size: large;
+    color: #121416;
+  
+}
+#spinner{
+    display: none;
+}
+h1{
+    color:#030007 ;
+}
+button{
+padding: 10px 20px;
+    font-weight: bolder;
+    background-color:#030007;
+    color: rgb(247, 242, 242);
+}
+input{
+    padding: 10px 60px;
+}
