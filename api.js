@@ -12,17 +12,17 @@ const searchBook = () => {
     //error
     const errorDiv = document.getElementById("error");
     if (searchText === '') {
+
         errorDiv.innerText = "Search field cannot be empty or enter a valid book name.";
+
         return;
     }
     //display spinner
     toggleSpinner('block');
     toggleSearchResult('none');
-    loadBooks(searchText);
+    errorDiv.innerText = " ";
     document.getElementById('search-field').value = '';
-}
-const loadBooks = searchText => {
-    const url = ` https://openlibrary.org/search.json?q=${searchText}`
+    const url = ` https://openlibrary.org/search.json?q=${searchText}`;
     fetch(url)
         .then(res => res.json())
         .then(data => displayBooks(data.docs));
@@ -35,6 +35,7 @@ const displayBooks = docs => {
         console.log(book);
         const div = document.createElement('div');
         div.innerHTML = `
+        <div>
             <h2>Book Name: ${book.title}</h2>
             <p>Author Name: ${book.author_name}</p>
             <p>Publish Date: ${book.publish_date}</p>
@@ -43,6 +44,7 @@ const displayBooks = docs => {
             <pre>
 
             </pre>
+            </div>
             `;
         container.appendChild(div);
     });
